@@ -32,6 +32,7 @@ import ObjectiveC
 import QuartzCore
 import UIKit
 
+@available(iOS 10.0, *)
 internal struct LGSideMenuHelper {
     private struct Keys {
         static var sideMenuController = "sideMenuController"

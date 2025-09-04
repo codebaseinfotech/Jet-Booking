@@ -31,6 +31,7 @@ import Foundation
 import QuartzCore
 import UIKit
 
+@available(iOS 10.0, *)
 /// Delegate protocol to observe behaviour of LGSideMenuController
 public protocol LGSideMenuDelegate {
 
@@ -91,6 +92,7 @@ public protocol LGSideMenuDelegate {
 
 // As swift doesn't support optional methods,
 // we use this extension with default empty implementations for delegate methods
+@available(iOS 10.0, *)
 public extension LGSideMenuDelegate {
 
     func willShowLeftView(sideMenuController: LGSideMenuController) {}

@@ -31,6 +31,7 @@ import Foundation
 import CoreGraphics
 import UIKit
 
+@available(iOS 10.0, *)
 internal extension LGSideMenuController {
 
     func validateViewsFrames() {

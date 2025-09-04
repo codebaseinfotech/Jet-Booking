@@ -32,6 +32,7 @@ import UIKit
 
 private let pointsNeededForShadow: CGFloat = 10.0
 
+@available(iOS 10.0, *)
 internal extension LGSideMenuController {
 
     func validateViewsTransforms() {

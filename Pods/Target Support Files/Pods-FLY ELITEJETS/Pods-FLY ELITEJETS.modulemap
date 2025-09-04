@@ -1,0 +1,6 @@
+framework module Pods_FLY_ELITEJETS {
+  umbrella header "Pods-FLY ELITEJETS-umbrella.h"
+
+  export *
+  module * { export * }
+}

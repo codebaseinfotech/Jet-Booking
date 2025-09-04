@@ -30,6 +30,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 10.0, *)
 internal extension LGSideMenuController {
 
     func validateViewsUserInteraction() {

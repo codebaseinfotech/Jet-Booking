@@ -30,11 +30,12 @@
 import Foundation
 import UIKit
 
+@available(iOS 10.0, *)
 extension UIViewController {
 
     /// If the view controller or one of its ancestors is a child of a LGSideMenuController, this property contains the owning LGSideMenuController.
     /// This property is nil if the view controller is not embedded inside a LGSideMenuController.
-    weak open var sideMenuController: LGSideMenuController? {
+    weak public var sideMenuController: LGSideMenuController? {
         if let controller = self as? LGSideMenuController {
             return controller
         }

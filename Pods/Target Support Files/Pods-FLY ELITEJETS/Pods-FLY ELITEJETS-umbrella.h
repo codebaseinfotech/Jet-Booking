@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Jet_BookingVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Jet_BookingVersionString[];
+FOUNDATION_EXPORT double Pods_FLY_ELITEJETSVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_FLY_ELITEJETSVersionString[];
 

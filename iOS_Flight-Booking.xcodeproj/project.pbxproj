@@ -72,7 +72,6 @@
 		2FFCF9A5299E0F2100603629 /* NotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFCF9A4299E0F2100603629 /* NotificationVC.swift */; };
 		2FFD956A299E0D1700225001 /* HeaderForNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FFD9569299E0D1700225001 /* HeaderForNotification.swift */; };
 		2FFD956C299E0D3E00225001 /* HeaderForNotification.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FFD956B299E0D3E00225001 /* HeaderForNotification.xib */; };
-		5F5C6DE9B35421D5CEC3181A /* Pods_Jet_Booking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C1A935FB2AE5E96D72BDCE0 /* Pods_Jet_Booking.framework */; };
 		8801571829AA34EE0081CFB0 /* JBItenariesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801571629AA34EE0081CFB0 /* JBItenariesList.swift */; };
 		8801571929AA34EE0081CFB0 /* JBItenariesListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801571729AA34EE0081CFB0 /* JBItenariesListData.swift */; };
 		88043F332AA878260027C6EA /* FBFlightDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88043F312AA878260027C6EA /* FBFlightDetailData.swift */; };
@@ -110,6 +109,7 @@
 		BCC18FF92A9C9C65007E34F6 /* JBSearchFightListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCC18FF72A9C9C65007E34F6 /* JBSearchFightListData.swift */; };
 		BCEC851B29ADC97F00FE0831 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCEC851A29ADC97F00FE0831 /* InfoViewController.swift */; };
 		BCF0EEDF29B0638A008EF51E /* Ap_Logo_New.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EEDE29B0638A008EF51E /* Ap_Logo_New.png */; };
+		D3F3FBA1FCF1E23386893940 /* Pods_FLY_ELITEJETS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C6E22B0196136F9226BBB /* Pods_FLY_ELITEJETS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -146,7 +146,6 @@
 		22A8DBFA298D1A6200A3A81E /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
 		22A8DBFB298D1A6200A3A81E /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
 		22A8DC0F298D2F2000A3A81E /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
-		2C1A935FB2AE5E96D72BDCE0 /* Pods_Jet_Booking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jet_Booking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F27BD0F299DEC5F0022D779 /* MyQuoteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyQuoteVC.swift; sourceTree = "<group>"; };
 		2F27BD11299DFC800022D779 /* FlightDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailVC.swift; sourceTree = "<group>"; };
 		2F27BD13299DFF750022D779 /* EmptyLegsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyLegsVC.swift; sourceTree = "<group>"; };
@@ -182,6 +181,7 @@
 		2FFD9569299E0D1700225001 /* HeaderForNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForNotification.swift; sourceTree = "<group>"; };
 		2FFD956B299E0D3E00225001 /* HeaderForNotification.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderForNotification.xib; sourceTree = "<group>"; };
 		3FC166BBF3B80DED5CE05881 /* Pods-iOS_Flight-Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Flight-Booking.release.xcconfig"; path = "Target Support Files/Pods-iOS_Flight-Booking/Pods-iOS_Flight-Booking.release.xcconfig"; sourceTree = "<group>"; };
+		7B3C6E22B0196136F9226BBB /* Pods_FLY_ELITEJETS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FLY_ELITEJETS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8801571629AA34EE0081CFB0 /* JBItenariesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBItenariesList.swift; sourceTree = "<group>"; };
 		8801571729AA34EE0081CFB0 /* JBItenariesListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBItenariesListData.swift; sourceTree = "<group>"; };
 		88043F312AA878260027C6EA /* FBFlightDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFlightDetailData.swift; sourceTree = "<group>"; };
@@ -222,6 +222,8 @@
 		BCEC851A29ADC97F00FE0831 /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		BCF0EEDE29B0638A008EF51E /* Ap_Logo_New.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ap_Logo_New.png; sourceTree = "<group>"; };
 		C96731FEA5F185418B8A4360 /* Pods-iOS_Flight-Booking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOS_Flight-Booking.debug.xcconfig"; path = "Target Support Files/Pods-iOS_Flight-Booking/Pods-iOS_Flight-Booking.debug.xcconfig"; sourceTree = "<group>"; };
+		E6C98F071113A61FA6EFB62C /* Pods-FLY ELITEJETS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLY ELITEJETS.debug.xcconfig"; path = "Target Support Files/Pods-FLY ELITEJETS/Pods-FLY ELITEJETS.debug.xcconfig"; sourceTree = "<group>"; };
+		FAA5889D08313CC2BCBA3497 /* Pods-FLY ELITEJETS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FLY ELITEJETS.release.xcconfig"; path = "Target Support Files/Pods-FLY ELITEJETS/Pods-FLY ELITEJETS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +231,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5F5C6DE9B35421D5CEC3181A /* Pods_Jet_Booking.framework in Frameworks */,
+				D3F3FBA1FCF1E23386893940 /* Pods_FLY_ELITEJETS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,6 +245,8 @@
 				3FC166BBF3B80DED5CE05881 /* Pods-iOS_Flight-Booking.release.xcconfig */,
 				A66D3AAF7E95C2470F384CA4 /* Pods-Jet Booking.debug.xcconfig */,
 				8ECE3E0439BEAAD3C01EF986 /* Pods-Jet Booking.release.xcconfig */,
+				E6C98F071113A61FA6EFB62C /* Pods-FLY ELITEJETS.debug.xcconfig */,
+				FAA5889D08313CC2BCBA3497 /* Pods-FLY ELITEJETS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -603,7 +607,7 @@
 		E2EB76508A26914EFCFFC14B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2C1A935FB2AE5E96D72BDCE0 /* Pods_Jet_Booking.framework */,
+				7B3C6E22B0196136F9226BBB /* Pods_FLY_ELITEJETS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -721,7 +725,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Jet Booking-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-FLY ELITEJETS-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -734,15 +738,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Jet Booking/Pods-Jet Booking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FLY ELITEJETS/Pods-FLY ELITEJETS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Jet Booking/Pods-Jet Booking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FLY ELITEJETS/Pods-FLY ELITEJETS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Jet Booking/Pods-Jet Booking-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FLY ELITEJETS/Pods-FLY ELITEJETS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -963,7 +967,7 @@
 		};
 		22A8DBDD298CCF8400A3A81E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A66D3AAF7E95C2470F384CA4 /* Pods-Jet Booking.debug.xcconfig */;
+			baseConfigurationReference = E6C98F071113A61FA6EFB62C /* Pods-FLY ELITEJETS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -988,7 +992,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FlyEliteJets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -999,7 +1003,7 @@
 		};
 		22A8DBDE298CCF8400A3A81E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ECE3E0439BEAAD3C01EF986 /* Pods-Jet Booking.release.xcconfig */;
+			baseConfigurationReference = FAA5889D08313CC2BCBA3497 /* Pods-FLY ELITEJETS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -1024,7 +1028,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.FlyEliteJets;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

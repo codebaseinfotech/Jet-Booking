@@ -30,6 +30,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 10.0, *)
 extension LGSideMenuController {
 
     /// Is root view fully opened

@@ -31,6 +31,7 @@ import Foundation
 import CoreGraphics
 import UIKit
 
+@available(iOS 10.0, *)
 public final class LGSideMenuStatusBarBackgroundView: UIView {
 
     public internal(set) var fillColor: UIColor = .clear {

@@ -32,6 +32,7 @@ import CoreGraphics
 import QuartzCore
 import UIKit
 
+@available(iOS 10.0, *)
 open class LGSideMenuController: UIViewController, UIGestureRecognizerDelegate {
 
     public typealias Completion = () -> Void
