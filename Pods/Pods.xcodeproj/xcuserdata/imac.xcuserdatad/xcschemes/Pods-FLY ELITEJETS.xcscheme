@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3BFA50DA07196AD4DB6512C559850F45"
-               BuildableName = "OTPFieldView.framework"
-               BlueprintName = "OTPFieldView"
+               BlueprintIdentifier = "7E2493C53A985F7A5236C1280B098E63"
+               BuildableName = "Pods_FLY_ELITEJETS.framework"
+               BlueprintName = "Pods-FLY ELITEJETS"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

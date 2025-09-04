@@ -101,6 +101,11 @@
 		888F293229A63B8500990F54 /* JBEmptyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F293029A63B8400990F54 /* JBEmptyLeg.swift */; };
 		88BA359829ACA6A300B6FD26 /* JBAddFightList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA359629ACA6A300B6FD26 /* JBAddFightList.swift */; };
 		88BA359929ACA6A300B6FD26 /* JBAddFightListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA359729ACA6A300B6FD26 /* JBAddFightListData.swift */; };
+		88C8B1DB2E699AC50086624D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1DA2E699AC50086624D /* Alamofire */; };
+		88C8B1E02E699ADC0086624D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1DF2E699ADC0086624D /* IQKeyboardManagerSwift */; };
+		88C8B1E32E699B400086624D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1E22E699B400086624D /* Kingfisher */; };
+		88C8B1E62E699B530086624D /* LGSideMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1E52E699B530086624D /* LGSideMenuController */; };
+		88C8B1E92E699B690086624D /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1E82E699B690086624D /* SVProgressHUD */; };
 		88EF988E29A4E89900D27717 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF988D29A4E89900D27717 /* SearchVC.swift */; };
 		88FD3B6329CAF46C00771335 /* SPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD3B6229CAF46C00771335 /* SPopUpVC.swift */; };
 		BC95A7D729B3470200B7335F /* JBUpcomingItenaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95A7D529B3470200B7335F /* JBUpcomingItenaries.swift */; };
@@ -232,6 +237,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3F3FBA1FCF1E23386893940 /* Pods_FLY_ELITEJETS.framework in Frameworks */,
+				88C8B1E02E699ADC0086624D /* IQKeyboardManagerSwift in Frameworks */,
+				88C8B1E92E699B690086624D /* SVProgressHUD in Frameworks */,
+				88C8B1E62E699B530086624D /* LGSideMenuController in Frameworks */,
+				88C8B1DB2E699AC50086624D /* Alamofire in Frameworks */,
+				88C8B1E32E699B400086624D /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +668,13 @@
 				Base,
 			);
 			mainGroup = 22A8DBBF298CCF7F00A3A81E;
+			packageReferences = (
+				88C8B1D92E699AC50086624D /* XCRemoteSwiftPackageReference "Alamofire" */,
+				88C8B1DE2E699ADC0086624D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				88C8B1E12E699B400086624D /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				88C8B1E42E699B530086624D /* XCRemoteSwiftPackageReference "LGSideMenuController" */,
+				88C8B1E72E699B690086624D /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+			);
 			productRefGroup = 22A8DBC9298CCF8000A3A81E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1059,6 +1076,77 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		88C8B1D92E699AC50086624D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
+		88C8B1DE2E699ADC0086624D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.10;
+			};
+		};
+		88C8B1E12E699B400086624D /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
+		88C8B1E42E699B530086624D /* XCRemoteSwiftPackageReference "LGSideMenuController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Friend-LGA/LGSideMenuController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.2;
+			};
+		};
+		88C8B1E72E699B690086624D /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		88C8B1DA2E699AC50086624D /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C8B1D92E699AC50086624D /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		88C8B1DF2E699ADC0086624D /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C8B1DE2E699ADC0086624D /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
+		88C8B1E22E699B400086624D /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C8B1E12E699B400086624D /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		88C8B1E52E699B530086624D /* LGSideMenuController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C8B1E42E699B530086624D /* XCRemoteSwiftPackageReference "LGSideMenuController" */;
+			productName = LGSideMenuController;
+		};
+		88C8B1E82E699B690086624D /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C8B1E72E699B690086624D /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 22A8DBC0298CCF7F00A3A81E /* Project object */;
 }
