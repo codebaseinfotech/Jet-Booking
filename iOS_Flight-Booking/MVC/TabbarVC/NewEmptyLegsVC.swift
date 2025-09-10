@@ -63,15 +63,30 @@ class NewEmptyLegsVC: UIViewController {
             
             APIClient.sharedInstance.showIndicator()
             
+            // ✅ Current UTC time and +10 days
+            let now = Date()
+            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 9, to: now)!
+            
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm" // ✅ Matches API format
+            formatter.locale = Locale(identifier: "en_US_POSIX")
+            formatter.timeZone = TimeZone(abbreviation: "UTC") // UTC output
+            
+            let fromDateUTC = formatter.string(from: now)
+            let toDateUTC = formatter.string(from: tenDaysLater)
+            
             let param: [String: Any] = [
-                "from_date_utc":"2025-09-08T12:27",
-                "to_date_utc":"2025-09-11T12:27",
-                "page":"\(page)"
+                "from_date_utc": fromDateUTC,
+                "to_date_utc": toDateUTC,
+                "page": "\(page)"
             ]
             
-            print(param)
+            print("PARAMS:", param)
             
-            APIClient.sharedInstance.MakeAPICallWithOutHeaderPostNew("https://appadmin.flyelitejets.com/api/user/getAvailabilities", parameters: param) { response, error, statusCode in
+            APIClient.sharedInstance.MakeAPICallWithOutHeaderPostNew(
+                "https://appadmin.flyelitejets.com/api/user/getAvailabilities",
+                parameters: param
+            ) { response, error, statusCode in
                 
                 print("STATUS CODE \(String(describing: statusCode))")
                 print("RESPONSE \(String(describing: response))")
