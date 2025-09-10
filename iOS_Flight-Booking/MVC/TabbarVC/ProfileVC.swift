@@ -84,7 +84,7 @@ class ProfileVC: UIViewController {
     
     @IBAction func clickedEmrtyLegs(_ sender: Any) {
         let mainStoryboard : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let vc = mainStoryboard.instantiateViewController(withIdentifier: "EmptyLegsVC") as! EmptyLegsVC
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "NewEmptyLegsVC") as! NewEmptyLegsVC
         self.navigationController?.pushViewController(vc, animated: false)
     }
     

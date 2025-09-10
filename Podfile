@@ -14,6 +14,7 @@ pod 'Toast-Swift', '~> 5.0.1'
 pod 'UITextView+Placeholder'
 #pod 'Kingfisher'
 pod 'SwiftGifOrigin'
+pod 'DropDown'
 
   # Pods for iOS_Flight-Booking
 

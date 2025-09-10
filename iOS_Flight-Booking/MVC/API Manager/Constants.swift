@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 //let BASE_URL = "https://techmavesoftwaredemo.com/elitejets/api/Admin/"
-
-let BASE_URL = "https://flyelitejets.com/appadmin/api/admin/"
+ 
+let BASE_URL = "https://appadmin.flyelitejets.com/api/admin/"
 
 //*******************************************************************************
 
@@ -54,6 +54,9 @@ let UPACOMMING_ITEARIES_LIST = "upcomingItenariesList"
 
 let FLIGHT_DETAILS = "FlightDetail"
 
+let EMPTY_LEGS_REQUEST = "EmptyLegRequest"
+
+let EMPTY_LEGS_AVIPAGES = "https://appadmin.flyelitejets.com/api/user/getAvailabilities"
 
 //*******************************************************************************
 

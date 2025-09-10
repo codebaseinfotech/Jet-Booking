@@ -1,5 +1,5 @@
 {
-  "originHash" : "c9bf384f29c681bfe93d02f927732caca67145723f1eccd49dbebe18cc3e32a4",
+  "originHash" : "3852f110d81696903d2db65139fb61a721021873e69535056b855a6b4473eae6",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
         "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "countrypickerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kizitonwose/CountryPickerView.git",
+      "state" : {
+        "revision" : "6ecf22145d577411fb97c8c964df0fb5886f035f",
+        "version" : "3.3.0"
       }
     },
     {

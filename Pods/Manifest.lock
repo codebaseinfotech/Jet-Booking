@@ -1,10 +1,12 @@
 PODS:
+  - DropDown (2.3.13)
   - OTPFieldView (1.0.1)
   - SwiftGifOrigin (1.7.0)
   - Toast-Swift (5.0.1)
   - "UITextView+Placeholder (1.4.0)"
 
 DEPENDENCIES:
+  - DropDown
   - OTPFieldView
   - SwiftGifOrigin
   - Toast-Swift (~> 5.0.1)
@@ -12,17 +14,19 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - DropDown
     - OTPFieldView
     - SwiftGifOrigin
     - Toast-Swift
     - "UITextView+Placeholder"
 
 SPEC CHECKSUMS:
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   OTPFieldView: 700a752fe62c41d1c4914c78aa500fb30d97c255
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: 7e1972c8fc51715eb347bc958922d2871a88024b
+PODFILE CHECKSUM: 44ab1ee7cb8e800858ca5f36cf4f5da51e3ed657
 
 COCOAPODS: 1.16.2

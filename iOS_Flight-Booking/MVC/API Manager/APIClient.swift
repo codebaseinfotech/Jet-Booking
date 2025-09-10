@@ -64,6 +64,39 @@ class APIClient: NSObject {
         }
     }
     
+    func MakeAPICallWithOutHeaderPostNew(_ url: String, parameters: [String: Any], completionHandler:@escaping (NSDictionary?, Error?, Int?) -> Void) {
+        
+        print("url = \(url)")
+        
+        if NetConnection.isConnectedToNetwork() == true
+        {
+            
+            
+            AF.request(url, method:.post, parameters: parameters,encoding: URLEncoding(destination: .methodDependent), headers: nil) .responseJSON { (response) in
+                
+                switch(response.result) {
+                    
+                case .success:
+                    if response.value != nil{
+                        if let responseDict = ((response.value as AnyObject) as? NSDictionary) {
+                            completionHandler(responseDict, nil, response.response?.statusCode)
+                        }
+                    }
+                    
+                case .failure:
+                    print(response.error!)
+                    print("Http Status Code: \(String(describing: response.response?.statusCode))")
+                    completionHandler(nil, response.error, response.response?.statusCode )
+                }
+            }
+        }
+        else
+        {
+            print("No Network Found!")
+            pushNetworkErrorVC()
+            SVProgressHUD.dismiss()
+        }
+    }
     
     func MakeAPICallWithAuthHeaderPost(_ url: String, parameters: [String: Any], completionHandler:@escaping (NSDictionary?, Error?, Int?) -> Void) {
         

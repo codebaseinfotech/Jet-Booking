@@ -64,13 +64,13 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         let isRemeder = UserDefaults.standard.value(forKey: "isRemeder") as? Bool
-
+        
         if isRemeder == true
         {
             
             let username = UserDefaults.standard.value(forKey: "username") as? String
             let password = UserDefaults.standard.value(forKey: "password") as? String
-
+            
             self.txtUserName.text = username ?? ""
             self.txtPass.text = password ?? ""
             
