@@ -151,6 +151,10 @@ class BookYourFlightVC: UIViewController {
             self.view.makeToast("Enter email address")
             UIApplication.shared.windows.last?.makeToast("Enter email address")
             return
+        } else if !isValidEmail(txtEmail.text ?? "") {
+            self.view.makeToast("Enter valid email address")
+            UIApplication.shared.windows.last?.makeToast("Enter valid email address")
+            return
         } else if lblFlyPrivately.text == "Select an option" {
             self.view.makeToast("Please select fly privately option")
             UIApplication.shared.windows.last?.makeToast("Please select fly privately option")
@@ -224,6 +228,12 @@ class BookYourFlightVC: UIViewController {
                 APIClient.sharedInstance.hideIndicator()
             }
         }
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: email)
     }
     
 }

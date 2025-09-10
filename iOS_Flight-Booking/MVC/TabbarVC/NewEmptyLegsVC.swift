@@ -16,6 +16,10 @@ class NewEmptyLegsVC: UIViewController {
     
     var flights: [FBEmptyLegsListResult] = []
     
+    var currentPage = 1
+    var isLoading = false
+    var totalFlights = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +27,7 @@ class NewEmptyLegsVC: UIViewController {
         tblViewFlightsList.dataSource = self
         tblViewFlightsList.delegate = self
         
-        callEmptyLegsAviPagesAPI()
+        callEmptyLegsAviPagesAPI(page: currentPage)
         // Do any additional setup after loading the view.
     }
     
@@ -48,56 +52,70 @@ class NewEmptyLegsVC: UIViewController {
     @IBAction func clickedBookNow(_ sender: Any) {
         let mainStoryboard : UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let vc = mainStoryboard.instantiateViewController(withIdentifier: "BookYourFlightVC") as! BookYourFlightVC
-        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
     //MARK: - callEmptyLegsAviPagesAPI()
-    func callEmptyLegsAviPagesAPI() {
-        APIClient.sharedInstance.showIndicator()
-        
-        let param: [String: Any] = [:] // If no params needed, keep empty
-        
-        APIClient.sharedInstance.MakeAPICallWithOutHeaderPostNew("https://appadmin.flyelitejets.com/api/user/getAvailabilities", parameters: param) { response, error, statusCode in
+    func callEmptyLegsAviPagesAPI(page: Int) {
+            guard !isLoading else { return } // prevent multiple requests
+            isLoading = true
             
-            print("STATUS CODE \(String(describing: statusCode))")
-            print("RESPONSE \(String(describing: response))")
+            APIClient.sharedInstance.showIndicator()
             
-            APIClient.sharedInstance.hideIndicator()
+            let param: [String: Any] = [
+                "from_date_utc":"2025-09-08T12:27",
+                "to_date_utc":"2025-09-11T12:27",
+                "page":"\(page)"
+            ]
             
-            if error == nil {
-                if statusCode == 200 {
-                    let status = response?.value(forKey: "status") as? Bool ?? false
-                    let msg = response?.value(forKey: "msg") as? String ?? ""
-                    
-                    if status {
-                        if let dataDict = response?.value(forKey: "data") as? NSDictionary {
-                            if let results = dataDict.value(forKey: "results") as? [NSDictionary] {
-                                
-                                let totalCount = dataDict.value(forKey: "count") as? Int ?? 0
-                                
-                                // Parse model
-                                self.flights.removeAll()
-                                for dict in results {
-                                    let obj = FBEmptyLegsListResult(fromDictionary: dict)
-                                    self.flights.append(obj)
-                                }
-                                
-                                DispatchQueue.main.async {
-                                    self.lblFlightsCount.text = "\(totalCount) flights"
-                                    self.tblViewFlightsList.reloadData()
+            print(param)
+            
+            APIClient.sharedInstance.MakeAPICallWithOutHeaderPostNew("https://appadmin.flyelitejets.com/api/user/getAvailabilities", parameters: param) { response, error, statusCode in
+                
+                print("STATUS CODE \(String(describing: statusCode))")
+                print("RESPONSE \(String(describing: response))")
+                
+                APIClient.sharedInstance.hideIndicator()
+                self.isLoading = false
+                
+                if error == nil {
+                    if statusCode == 200 {
+                        let status = response?.value(forKey: "status") as? Bool ?? false
+                        let msg = response?.value(forKey: "msg") as? String ?? ""
+                        
+                        if status {
+                            if let dataDict = response?.value(forKey: "data") as? NSDictionary {
+                                if let results = dataDict.value(forKey: "results") as? [NSDictionary] {
+                                    
+                                    let totalCount = dataDict.value(forKey: "count") as? Int ?? 0
+                                    self.totalFlights = totalCount
+                                    
+                                    // Parse model
+                                    if page == 1 {
+                                        self.flights.removeAll()
+                                    }
+                                    
+                                    for dict in results {
+                                        let obj = FBEmptyLegsListResult(fromDictionary: dict)
+                                        self.flights.append(obj)
+                                    }
+                                    
+                                    DispatchQueue.main.async {
+                                        self.lblFlightsCount.text = "\(totalCount) flights"
+                                        self.tblViewFlightsList.reloadData()
+                                    }
                                 }
                             }
+                        } else {
+                            print("❌ API Failed:", msg)
                         }
-                    } else {
-                        print("❌ API Failed:", msg)
                     }
+                } else {
+                    print("❌ Error:", error?.localizedDescription ?? "Unknown error")
                 }
-            } else {
-                print("❌ Error:", error?.localizedDescription ?? "Unknown error")
             }
         }
-    }
     
     func formatFlightDate(_ dateString: String?) -> String {
         guard let dateString = dateString, !dateString.isEmpty else { return "" }
@@ -143,4 +161,17 @@ extension NewEmptyLegsVC: UITableViewDelegate, UITableViewDataSource {
         return UITableView.automaticDimension
     }
     
+    // Pagination trigger
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY > contentHeight - height - 100 { // when reaching near bottom
+            if !isLoading && flights.count < totalFlights {
+                currentPage += 1
+                callEmptyLegsAviPagesAPI(page: currentPage)
+            }
+        }
+    }
 }
