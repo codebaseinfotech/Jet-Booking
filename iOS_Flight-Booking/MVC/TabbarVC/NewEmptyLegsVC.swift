@@ -14,6 +14,10 @@ class NewEmptyLegsVC: UIViewController {
     
     @IBOutlet weak var tblViewFlightsList: UITableView!
     
+    @IBOutlet weak var viewNextBtn: UIView!
+    @IBOutlet weak var viewPreviousBtn: UIView!
+    
+    
     var flights: [FBEmptyLegsListResult] = []
     
     var currentPage = 1
@@ -26,6 +30,7 @@ class NewEmptyLegsVC: UIViewController {
         tblViewFlightsList.register(UINib(nibName: "NewEmptyLegsTblViewCell", bundle: nil), forCellReuseIdentifier: "NewEmptyLegsTblViewCell")
         tblViewFlightsList.dataSource = self
         tblViewFlightsList.delegate = self
+        tblViewFlightsList.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 60, right: 0)
         
         callEmptyLegsAviPagesAPI(page: currentPage)
         // Do any additional setup after loading the view.
@@ -55,17 +60,27 @@ class NewEmptyLegsVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func clickedPreviousBtn(_ sender: Any) {
+        self.currentPage -= 1
+        callEmptyLegsAviPagesAPI(page: currentPage)
+
+    }
+    
+    @IBAction func clickedNextBtn(_ sender: Any) {
+        self.currentPage += 1
+        callEmptyLegsAviPagesAPI(page: currentPage)
+     }
+    
+    
     
     //MARK: - callEmptyLegsAviPagesAPI()
     func callEmptyLegsAviPagesAPI(page: Int) {
-            guard !isLoading else { return } // prevent multiple requests
-            isLoading = true
             
             APIClient.sharedInstance.showIndicator()
             
             // ✅ Current UTC time and +10 days
             let now = Date()
-            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 9, to: now)!
+            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 3, to: now)!
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm" // ✅ Matches API format
@@ -103,21 +118,40 @@ class NewEmptyLegsVC: UIViewController {
                             if let dataDict = response?.value(forKey: "data") as? NSDictionary {
                                 if let results = dataDict.value(forKey: "results") as? [NSDictionary] {
                                     
-                                    let totalCount = dataDict.value(forKey: "count") as? Int ?? 0
-                                    self.totalFlights = totalCount
-                                    
-                                    // Parse model
-                                    if page == 1 {
-                                        self.flights.removeAll()
-                                    }
+                                    self.flights.removeAll()
                                     
                                     for dict in results {
                                         let obj = FBEmptyLegsListResult(fromDictionary: dict)
                                         self.flights.append(obj)
                                     }
+ 
+                                    let next = dataDict.value(forKey: "next") as? String ?? ""
+                                    let previous = dataDict.value(forKey: "previous") as? String ?? ""
+                                    
+                                    if next != ""
+                                    {
+                                        
+                                        self.viewNextBtn.isHidden = false
+                                    }
+                                    else
+                                    {
+                                        self.viewNextBtn.isHidden = true
+                                    }
+                                    
+                                    
+                                    if previous != ""
+                                    {
+                                        
+                                        self.viewPreviousBtn.isHidden = false
+                                    }
+                                    else
+                                    {
+                                        self.viewPreviousBtn.isHidden = true
+                                    }
+
                                     
                                     DispatchQueue.main.async {
-                                        self.lblFlightsCount.text = "\(totalCount) flights"
+                                        self.lblFlightsCount.text = "\(self.flights.count) flights"
                                         self.tblViewFlightsList.reloadData()
                                     }
                                 }
@@ -131,6 +165,81 @@ class NewEmptyLegsVC: UIViewController {
                 }
             }
         }
+    
+//    func callEmptyLegsAviPagesAPI(page: Int) {
+//            guard !isLoading else { return } // prevent multiple requests
+//            isLoading = true
+//            
+//            APIClient.sharedInstance.showIndicator()
+//            
+//            // ✅ Current UTC time and +10 days
+//            let now = Date()
+//            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 9, to: now)!
+//            
+//            let formatter = DateFormatter()
+//            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm" // ✅ Matches API format
+//            formatter.locale = Locale(identifier: "en_US_POSIX")
+//            formatter.timeZone = TimeZone(abbreviation: "UTC") // UTC output
+//            
+//            let fromDateUTC = formatter.string(from: now)
+//            let toDateUTC = formatter.string(from: tenDaysLater)
+//            
+//            let param: [String: Any] = [
+//                "from_date_utc": fromDateUTC,
+//                "to_date_utc": toDateUTC,
+//                "page": "\(page)"
+//            ]
+//            
+//            print("PARAMS:", param)
+//            
+//            APIClient.sharedInstance.MakeAPICallWithOutHeaderPostNew(
+//                "https://appadmin.flyelitejets.com/api/user/getAvailabilities",
+//                parameters: param
+//            ) { response, error, statusCode in
+//                
+//                print("STATUS CODE \(String(describing: statusCode))")
+//                print("RESPONSE \(String(describing: response))")
+//                
+//                APIClient.sharedInstance.hideIndicator()
+//                self.isLoading = false
+//                
+//                if error == nil {
+//                    if statusCode == 200 {
+//                        let status = response?.value(forKey: "status") as? Bool ?? false
+//                        let msg = response?.value(forKey: "msg") as? String ?? ""
+//                        
+//                        if status {
+//                            if let dataDict = response?.value(forKey: "data") as? NSDictionary {
+//                                if let results = dataDict.value(forKey: "results") as? [NSDictionary] {
+//                                    
+//                                    let totalCount = dataDict.value(forKey: "count") as? Int ?? 0
+//                                    self.totalFlights = totalCount
+//                                    
+//                                    // Parse model
+//                                    if page == 1 {
+//                                        self.flights.removeAll()
+//                                    }
+//                                    
+//                                    for dict in results {
+//                                        let obj = FBEmptyLegsListResult(fromDictionary: dict)
+//                                        self.flights.append(obj)
+//                                    }
+//                                    
+//                                    DispatchQueue.main.async {
+//                                        self.lblFlightsCount.text = "\(totalCount) flights"
+//                                        self.tblViewFlightsList.reloadData()
+//                                    }
+//                                }
+//                            }
+//                        } else {
+//                            print("❌ API Failed:", msg)
+//                        }
+//                    }
+//                } else {
+//                    print("❌ Error:", error?.localizedDescription ?? "Unknown error")
+//                }
+//            }
+//        }
     
     func formatFlightDate(_ dateString: String?) -> String {
         guard let dateString = dateString, !dateString.isEmpty else { return "" }
@@ -177,16 +286,16 @@ extension NewEmptyLegsVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     // Pagination trigger
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let offsetY = scrollView.contentOffset.y
-        let contentHeight = scrollView.contentSize.height
-        let height = scrollView.frame.size.height
-        
-        if offsetY > contentHeight - height - 100 { // when reaching near bottom
-            if !isLoading && flights.count < totalFlights {
-                currentPage += 1
-                callEmptyLegsAviPagesAPI(page: currentPage)
-            }
-        }
-    }
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        let offsetY = scrollView.contentOffset.y
+//        let contentHeight = scrollView.contentSize.height
+//        let height = scrollView.frame.size.height
+//        
+//        if offsetY > contentHeight - height - 100 { // when reaching near bottom
+//            if !isLoading && flights.count < totalFlights {
+//                currentPage += 1
+//                callEmptyLegsAviPagesAPI(page: currentPage)
+//            }
+//        }
+//    }
 }

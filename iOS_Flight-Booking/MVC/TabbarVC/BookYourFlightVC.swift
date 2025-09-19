@@ -31,6 +31,7 @@ class BookYourFlightVC: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     @IBOutlet weak var txtMessageView: UITextView!
     
+    @IBOutlet weak var imgCheckBox: UIImageView!
     
     var arrTitle = ["Mr.", "Mrs.", "Ms.", "Other"]
     
@@ -64,8 +65,14 @@ class BookYourFlightVC: UIViewController {
         
         // Set default country (optional)
         let defaultCountry = countryPickerView.selectedCountry
-        lblCountry.text = "\(defaultCountry.code)"
+        lblCountry.text = "\(defaultCountry.phoneCode)"
         imgCountryFlag.image = defaultCountry.flag
+        
+        imgCheckBox.image = UIImage(named: "ic_uncheck")
+        
+        txtFName.text = appDelegate.dicCurrentUserData.firstName ?? ""
+        txtLName.text = appDelegate.dicCurrentUserData.lastName ?? ""
+        txtEmail.text = appDelegate.dicCurrentUserData.email ?? ""
         
         setupDropDowns()
         // Do any additional setup after loading the view.
@@ -171,10 +178,26 @@ class BookYourFlightVC: UIViewController {
             self.view.makeToast("Please enter message")
             UIApplication.shared.windows.last?.makeToast("Please enter message")
             return
+        } else if imgCheckBox.image != UIImage(named: "ic_check-box") {
+            self.view.makeToast("Please accept the terms and conditions")
+            UIApplication.shared.windows.last?.makeToast("Please accept the terms and conditions")
+            return
         }
         
         self.callEmptyLegsRequestAPI()
     }
+    
+    @IBAction func clickedCheckBox(_ sender: Any) {
+        if imgCheckBox.image == UIImage(named: "ic_check-box")
+        {
+            imgCheckBox.image = UIImage(named: "ic_uncheck")
+        }
+        else
+        {
+            imgCheckBox.image = UIImage(named: "ic_check-box")
+        }
+    }
+    
     
     
     //MARK: - callEmptyLegsRequestAPI()
@@ -240,7 +263,7 @@ class BookYourFlightVC: UIViewController {
 
 extension BookYourFlightVC: CountryPickerViewDelegate {
     func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
-        lblCountry.text = country.code
+        lblCountry.text = country.phoneCode
         imgCountryFlag.image = country.flag
     }
 }
