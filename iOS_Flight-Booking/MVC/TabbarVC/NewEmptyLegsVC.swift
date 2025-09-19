@@ -17,6 +17,10 @@ class NewEmptyLegsVC: UIViewController {
     @IBOutlet weak var viewNextBtn: UIView!
     @IBOutlet weak var viewPreviousBtn: UIView!
     
+    @IBOutlet weak var btnPreviousPage: UIButton!
+    @IBOutlet weak var btnNextPage: UIButton!
+    
+    
     
     var flights: [FBEmptyLegsListResult] = []
     
@@ -118,6 +122,10 @@ class NewEmptyLegsVC: UIViewController {
                             if let dataDict = response?.value(forKey: "data") as? NSDictionary {
                                 if let results = dataDict.value(forKey: "results") as? [NSDictionary] {
                                     
+                                    
+                                    let totalCount = dataDict.value(forKey: "count") as? Int ?? 0
+                                    self.totalFlights = totalCount
+                                    
                                     self.flights.removeAll()
                                     
                                     for dict in results {
@@ -130,29 +138,30 @@ class NewEmptyLegsVC: UIViewController {
                                     
                                     if next != ""
                                     {
-                                        
-                                        self.viewNextBtn.isHidden = false
+                                        self.btnNextPage.isEnabled = true
+                                        self.viewNextBtn.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1)
                                     }
                                     else
                                     {
-                                        self.viewNextBtn.isHidden = true
+                                        self.btnNextPage.isEnabled = false
+                                        self.viewNextBtn.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 0.5)
                                     }
                                     
                                     
                                     if previous != ""
                                     {
-                                        
-                                        self.viewPreviousBtn.isHidden = false
+                                        self.btnPreviousPage.isEnabled = true
+                                        self.viewPreviousBtn.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 1)
                                     }
                                     else
                                     {
-                                        self.viewPreviousBtn.isHidden = true
+                                        self.btnPreviousPage.isEnabled = false
+                                        self.viewPreviousBtn.backgroundColor = UIColor(red: 29/255, green: 29/255, blue: 27/255, alpha: 0.5)
                                     }
 
                                     if self.flights.count > 0 {
                                         DispatchQueue.main.async {
-                                            self.lblFlightsCount.text = "\(self.flights.count) flights"
-                                            self.tblViewFlightsList.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                            self.lblFlightsCount.text = "\(totalCount) flights"
                                             self.tblViewFlightsList.reloadData()
                                         }
                                     }
