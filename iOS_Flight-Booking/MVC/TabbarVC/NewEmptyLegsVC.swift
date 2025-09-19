@@ -80,7 +80,7 @@ class NewEmptyLegsVC: UIViewController {
             
             // ✅ Current UTC time and +10 days
             let now = Date()
-            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 3, to: now)!
+            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 9, to: now)!
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm" // ✅ Matches API format
@@ -149,10 +149,15 @@ class NewEmptyLegsVC: UIViewController {
                                         self.viewPreviousBtn.isHidden = true
                                     }
 
-                                    
-                                    DispatchQueue.main.async {
-                                        self.lblFlightsCount.text = "\(self.flights.count) flights"
-                                        self.tblViewFlightsList.reloadData()
+                                    if self.flights.count > 0 {
+                                        DispatchQueue.main.async {
+                                            self.lblFlightsCount.text = "\(self.flights.count) flights"
+                                            self.tblViewFlightsList.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: false)
+                                            self.tblViewFlightsList.reloadData()
+                                        }
+                                    }
+                                    else {
+                                        self.lblFlightsCount.text = "0 flights"
                                     }
                                 }
                             }
