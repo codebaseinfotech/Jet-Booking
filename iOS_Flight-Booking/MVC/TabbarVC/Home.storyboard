@@ -5920,7 +5920,7 @@ Empty Legs!	</string>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8De-Rj-tk3">
                                                                         <rect key="frame" x="0.0" y="5" width="25" height="25"/>
                                                                         <subviews>
-                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_uncheck" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-Xp-7Xe">
+                                                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_check-box" translatesAutoresizingMaskIntoConstraints="NO" id="TVY-Xp-7Xe">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
                                                                             </imageView>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWF-Wj-PJC">
@@ -7409,8 +7409,8 @@ FlyElite Jets empty legs are flights where aircraft are flying empty between air
         <image name="ic_UnSelect_Home" width="59" height="70"/>
         <image name="ic_UnSelect_User" width="88" height="96"/>
         <image name="ic_bookingSubmitted" width="381" height="306"/>
+        <image name="ic_check-box" width="512" height="512"/>
         <image name="ic_down" width="84" height="85"/>
-        <image name="ic_uncheck" width="512" height="512"/>
         <image name="list 1" width="56" height="56"/>
         <image name="search" width="17" height="17"/>
         <image name="search-1" width="16" height="16"/>

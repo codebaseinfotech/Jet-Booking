@@ -68,7 +68,7 @@ class BookYourFlightVC: UIViewController {
         lblCountry.text = "\(defaultCountry.phoneCode)"
         imgCountryFlag.image = defaultCountry.flag
         
-        imgCheckBox.image = UIImage(named: "ic_uncheck")
+        imgCheckBox.image = UIImage(named: "ic_check-box")
         
         txtFName.text = appDelegate.dicCurrentUserData.firstName ?? ""
         txtLName.text = appDelegate.dicCurrentUserData.lastName ?? ""
