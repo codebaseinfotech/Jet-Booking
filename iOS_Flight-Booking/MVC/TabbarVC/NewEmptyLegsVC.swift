@@ -84,7 +84,7 @@ class NewEmptyLegsVC: UIViewController {
             
             // ✅ Current UTC time and +10 days
             let now = Date()
-            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 9, to: now)!
+            let tenDaysLater = Calendar.current.date(byAdding: .day, value: 10, to: now)!
             
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd'T'HH:mm" // ✅ Matches API format
