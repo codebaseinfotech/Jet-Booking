@@ -103,7 +103,7 @@ class NewEmptyLegsVC: UIViewController {
             print("PARAMS:", param)
             
             APIClient.sharedInstance.MakeAPICallWithOutHeaderPostNew(
-                "https://appadmin.flyelitejets.com/api/user/getAvailabilities",
+                EMPTY_LEGS_AVIPAGES,
                 parameters: param
             ) { response, error, statusCode in
                 

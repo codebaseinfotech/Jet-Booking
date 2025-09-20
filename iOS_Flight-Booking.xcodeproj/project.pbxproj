@@ -129,16 +129,6 @@
 		D3F3FBA1FCF1E23386893940 /* Pods_FLY_ELITEJETS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3C6E22B0196136F9226BBB /* Pods_FLY_ELITEJETS.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		88D6724D2E6FE5CE004E4711 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 22A8DBC0298CCF7F00A3A81E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 573E183BC40ABB5128BDE67E;
-			remoteInfo = "Build Target";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		22472B03298E34DF0055B6BC /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		229332EC298E5A2100C1DED6 /* ForgetPassVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPassVC.swift; sourceTree = "<group>"; };
@@ -693,22 +683,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXLegacyTarget section */
-		573E183BC40ABB5128BDE67E /* Build Target */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "-c \"${AE76EDB}\"";
-			buildConfigurationList = 88D672522E6FFBB7004E4711 /* Build configuration list for PBXLegacyTarget "Build Target" */;
-			buildPhases = (
-			);
-			buildToolPath = /bin/sh;
-			dependencies = (
-			);
-			name = "Build Target";
-			passBuildSettingsInEnvironment = 1;
-			productName = "Build Target";
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		22A8DBC7298CCF8000A3A81E /* FLY ELITEJETS */ = {
 			isa = PBXNativeTarget;
@@ -723,7 +697,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				36E9CB007A2E0639BABDE67E /* PBXTargetDependency */,
 			);
 			name = "FLY ELITEJETS";
 			productName = "iOS_Flight-Booking";
@@ -766,7 +739,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				573E183BC40ABB5128BDE67E /* Build Target */,
 				22A8DBC7298CCF8000A3A81E /* FLY ELITEJETS */,
 			);
 		};
@@ -946,14 +918,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		36E9CB007A2E0639BABDE67E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 573E183BC40ABB5128BDE67E /* Build Target */;
-			targetProxy = 88D6724D2E6FE5CE004E4711 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		22A8DBD1298CCF8000A3A81E /* Main.storyboard */ = {
@@ -1163,25 +1127,6 @@
 			};
 			name = Release;
 		};
-		88D6724E2E6FE5D0004E4711 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				PRODUCT_NAME = "Build Target";
-			};
-			name = Debug;
-		};
-		88D6724F2E6FE5D0004E4711 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				PRODUCT_NAME = "Build Target";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1199,15 +1144,6 @@
 			buildConfigurations = (
 				22A8DBDD298CCF8400A3A81E /* Debug */,
 				22A8DBDE298CCF8400A3A81E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		88D672522E6FFBB7004E4711 /* Build configuration list for PBXLegacyTarget "Build Target" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				88D6724E2E6FE5D0004E4711 /* Debug */,
-				88D6724F2E6FE5D0004E4711 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
