@@ -70,7 +70,7 @@ class HomeVC: UIViewController {
     
     var arrSliderImg = ["FlyEliteJets Cessna Citation XLS+","FlyEliteJets XLS2"]
     
-    var arrSliderName = ["Booking and take\noff from 90 minutes!","FlyEliteJets worldwide"]
+    var arrSliderName = ["Booking and take\noff from 60 minutes!","FlyEliteJets worldwide"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
