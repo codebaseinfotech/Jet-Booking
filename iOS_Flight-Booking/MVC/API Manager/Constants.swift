@@ -9,13 +9,13 @@ import Foundation
 import UIKit
 
 //**********************  Dev  **********************
-let BASE_URL = "https://techmavedev.com/flyeltejets/api/Admin/"
-let EMPTY_LEGS_AVIPAGES = "https://techmavedev.com/flyeltejets/api/user/getAvailabilities"
+//let BASE_URL = "https://techmavedev.com/flyeltejets/api/Admin/"
+//let EMPTY_LEGS_AVIPAGES = "https://techmavedev.com/flyel  tejets/api/user/getAvailabilities"
 
 
 //**********************  Live  **********************
-//let BASE_URL = "https://appadmin.flyelitejets.com/api/admin/"
-//let EMPTY_LEGS_AVIPAGES = "https://appadmin.flyelitejets.com/api/user/getAvailabilities"
+let BASE_URL = "https://appadmin.flyelitejets.com/api/admin/"
+let EMPTY_LEGS_AVIPAGES = "https://appadmin.flyelitejets.com/api/user/getAvailabilities"
 
 //*******************************************************************************
 
