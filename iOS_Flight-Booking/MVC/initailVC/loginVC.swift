@@ -25,9 +25,6 @@ class loginVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-//        txtUserName.text = "admin@gmail.com"
-//        txtPass.text = "Admin@123"
         
         txtPass.isSecureTextEntry = true
         isHidePassword = true
